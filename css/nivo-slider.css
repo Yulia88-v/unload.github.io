@@ -1,0 +1,826 @@
+/*
+ * jQuery Nivo Slider v3.0.1
+ * http://nivo.dev7studios.com
+ *
+ * Copyright 2012, Dev7studios
+ * Free to use and abuse under the MIT license.
+ * http://www.opensource.org/licenses/mit-license.php
+ */
+ 
+/* The Nivo Slider styles */
+
+*{
+	margin: 0;
+	padding: 0;
+}
+#wrapper{
+	position: absolute;
+	z-index: 1;
+}
+
+.slider-wrapper { 
+	width: 100%; 
+	height: 100%;
+
+position: relative;
+bottom: 52px;
+}
+
+#slider {
+margin-bottom: 0;
+}
+
+
+/*====================*/
+/*=== Other Styles ===*/
+/*====================*/
+.clear {
+	clear:both;
+}
+
+.nivoSlider {
+	position:relative;
+	width:100%;
+	height:auto;
+	overflow: hidden;
+}
+.nivoSlider img {
+	position:absolute;
+	top:0px;
+	left:0px;
+}
+.nivo-main-image {
+	display: block !important;
+	position: relative !important; 
+	width: 100% !important;
+}
+
+/* If an image is wrapped in a link */
+
+/* The slices and boxes in the Slider */
+.nivo-slice {
+	display:block;
+	position:absolute;
+	z-index:5;
+	height:100%;
+	top:0;
+}
+.nivo-box {
+	display:block;
+	position:absolute;
+	z-index:5;
+	overflow:hidden;
+}
+.nivo-box img { display:block; }
+
+/* Caption styles */
+.nivo-caption {
+  color: #FFFFFF;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  position: absolute;
+  top:214px;
+  z-index: 8;
+}
+
+.nivo-html-caption {
+  display:none;
+}
+/*******slider1*****/
+.title1{
+ left: 300px;
+ top:20px;
+position: absolute;
+}
+.slide-h2{
+	font-size:16px; 
+	text-transform:uppercase; 
+	line-height:28px; 
+	color:#ffffff;
+	font-family: 'latobold_italic';
+	font-weight: bold;
+}
+.slide-h2 span{
+color:#ebe814;
+}
+.slide-h5{
+    font-family: 'latobold_italic';
+    font-size: 150px;
+    color: #fff;
+    font-weight: 900;
+}
+.slide-h5 span{
+color:#ebe814;
+}
+ .world{
+ 	position: absolute;
+	left:360px;
+    bottom: 70px;
+    color:#ebe814;
+    font-size: 270px;
+    font-family: 'latobold_italic';
+    width: 800px;
+    height: 100%;
+
+}
+.slide-h4{
+    font-family: 'latobold_italic';
+    font-size: 15px;
+    color: #fff;
+}
+.title1 a.slide-button {
+    padding: 10px 10px;
+    background: rgb(255, 180, 0);
+    width: 200px;
+    font-size: 12px;
+    text-align: center;
+    font-family: 'latobold_italic';
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    border-radius: 10px;
+    margin-top: 40px;
+    cursor: pointer;
+    transition: 0.8s;
+}
+
+ 
+.title1 .model{
+	position:relative;
+	background:#fff url(../img/loading.gif) no-repeat 50% 50%;
+
+}
+/*******slider2******/
+.title2{
+ left: 570px;
+ top:70px;
+position: absolute;
+}
+.title2 .title2_h1{
+    top: 324px;
+    left: 0px;
+    font-family: 'latobold_italic';
+    font-size: 60px;
+    line-height: 55px;
+    font-weight: 900;
+    text-transform: uppercase;
+    color: #ffb400;
+}
+.title2 a.slide-button2  {
+    padding: 15px 15px;
+    font-family: 'latobold_italic';
+    color: rgb(255, 255, 255);
+    background: rgba(31, 66, 93, 0.6);
+    width: 200px;
+    font-size: 12px;
+    text-align: center;
+    font-family: 'latobold_italic';
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    border-radius: 10px;
+    margin-top: 40px;
+    margin-left: 120px;
+}
+.title2 .title2_text{
+	font-family: 'latobold_italic';
+    font-size: 15px;
+    color: #fff;
+    text-align: center;
+    margin-top: 40px;
+    position: relative;
+}
+/*******Slider 3******/
+.title3_part{
+    font-family: 'latobold_italic';
+    font-size: 22px;
+    color: rgb(255, 255, 255);
+    text-shadow: rgba(0, 0, 0, 0.15) -2px 4px 18px;
+}
+.title1 a.slide-button2  {
+    padding: 15px 15px;
+    font-family: 'latobold_italic';
+    color: rgb(255, 255, 255);
+    background: rgba(31, 66, 93, 0.6);
+    width: 300px;
+    font-size: 12px;
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    border-radius: 10px;
+    margin-top: 40px;
+    text-align: center;
+}
+.title1 .title3_h1 {
+    font-family: 'latobold_italic';
+    font-size: 60px;
+    line-height: 55px;
+    font-weight: 900;
+    text-transform: uppercase;
+    color: #ffb400;
+    margin-top: 40px;
+}
+.title1 .title3_text{
+	font-family: 'latobold_italic';
+    font-size: 15px;
+    color: #fff;
+    text-align: center;
+    margin-top: 40px;
+    position: relative;
+}
+
+/* Direction nav styles (e.g. Next & Prev) */
+.nivo-directionNav a {
+	position:absolute;
+	top:45%;
+	z-index:9;
+	cursor:pointer;
+}
+.nivo-prevNav {
+	left:0px;
+}
+.nivo-nextNav {
+	right:0px;
+}
+/* Control nav styles (e.g. 1,2,3...) */
+.nivo-controlNav {
+	text-align:center;
+	padding: 15px 0;
+}
+.nivo-controlNav a {
+	cursor:pointer;
+}
+.nivo-controlNav a.active {
+	font-weight:bold;
+}
+
+.theme-default .nivoSlider {
+	position:relative;
+	background:#fff url(../img/loading.gif) no-repeat 50% 50%;
+    margin-bottom:50px;
+    -webkit-box-shadow: 0px 1px 5px 0px #4a4a4a;
+    -moz-box-shadow: 0px 1px 5px 0px #4a4a4a;
+    box-shadow: 0px 1px 5px 0px #4a4a4a;
+}
+.theme-default .nivoSlider img {
+	position:absolute;
+	top:0px;
+	left:0px;
+	display:none;
+}
+.theme-default .nivoSlider a {
+	border:0;
+	display:block;
+}
+
+.theme-default .nivo-controlNav {
+	text-align: center;
+	padding: 20px 0;
+}
+.theme-default .nivo-controlNav a {
+	display:inline-block;
+	width:22px;
+	height:22px;
+	background:url(../img/bullets.png) no-repeat;
+	text-indent:-9999px;
+	border:0;
+	margin: 0 2px;
+}
+.theme-default .nivo-controlNav a.active {
+	background-position:0 -22px;
+}
+
+.theme-default .nivo-directionNav a {
+	display:block;
+	width:30px;
+	height:30px;
+	background:url(../img/arrows.png) no-repeat;
+	text-indent:-9999px;
+	border:0;
+}
+.theme-default a.nivo-nextNav {
+	background-position:-30px 0;
+	right:15px;
+}
+.theme-default a.nivo-prevNav {
+	left:15px;
+}
+
+
+
+.theme-default .nivo-controlNav.nivo-thumbs-enabled {
+	width: 100%;
+}
+.theme-default .nivo-controlNav.nivo-thumbs-enabled a {
+	width: auto;
+	height: auto;
+	background: none;
+	margin-bottom: 5px;
+}
+.theme-default .nivo-controlNav.nivo-thumbs-enabled img {
+	display: block;
+	width: 120px;
+	height: auto;
+}
+
+/**********Rensponsive slider*******/
+
+@media(max-width:1300px){
+    .title1{
+ top:0px;
+
+}
+    }
+@media(max-width:1250px){
+    .slide-h2{
+    font-size:16px; 
+    
+    line-height:20px; 
+    
+}
+.slide-h5{
+    font-family: 'latobold_italic';
+    font-size: 130px;
+    color: #fff;
+    font-weight: 900;
+}
+    }
+    @media(max-width:1220px){
+    
+.title1 .title3_h1 {
+    
+    font-size: 60px;
+    line-height: 45px;
+    
+    margin-top: 20px;
+}
+    }
+    @media(max-width:1160px){
+    .nivo-caption {
+  
+  top:130px;
+
+}
+.title2{
+ left: 500px;
+ top:50px;
+
+}
+.title2 .title2_h1{
+    top: 264px;
+    font-size: 50px;
+    line-height: 45px;
+    
+}
+
+.title2 .title2_text{
+   
+    margin-top: 30px;
+    }
+
+    }
+     @media(max-width:1160px){
+       .nivo-caption {
+  
+  top:90px;
+
+} 
+
+
+.slide-h5{
+    font-family: 'latobold_italic';
+    font-size: 100px;
+    color: #fff;
+    font-weight: 900;
+}
+.slide-h5 span{
+color:#ebe814;
+}
+ .world{
+    left:270px;
+    bottom: 50px;
+    font-size: 200px;
+}
+.title2{
+ left: 430px;
+ top:60px;
+}
+.title2 .title2_h1{
+    top: 0px;
+    font-size: 50px;
+    line-height: 45px;
+    
+}
+.title2 a.slide-button2  {
+  
+    margin-top: 30px;
+    margin-left: 90px;
+}
+
+
+.title1 .title3_h1 {
+    font-size: 50px;
+    line-height: 45px;  
+    margin-top: 40px;
+}
+
+
+     }
+
+@media(max-width:960px){
+    .nivo-caption {
+  top:80px;
+
+}
+.slide-h5{
+    font-family: 'latobold_italic';
+    font-size: 80px;
+    color: #fff;
+    font-weight: 900;
+}
+
+ .world{
+    left:220px;
+   
+    font-size: 170px;
+}
+.title2{
+ left: 380px;
+ top:40px;
+}
+.title2 .title2_h1{
+    font-size: 45px;
+    line-height: 35px;
+    
+}
+.title2 .title2_text{
+   
+    text-align: left;
+    margin-top: 40px;
+    
+}
+.title2 a.slide-button2  {
+  
+    margin-top: 30px;
+    margin-left: 90px;
+}
+
+
+.title1 .title3_h1 {
+    font-size: 45px;
+    line-height: 35px;  
+    margin-top: 40px;
+}
+
+.title1 .title3_text{
+  
+    text-align: left;
+
+}
+
+}
+@media(max-width:900px){
+  .nivo-caption {
+  top:50px;
+
+}  
+.title2{
+ left: 300px;
+ top:40px;
+
+}
+.title2 .title2_h1{
+    top: 4px;
+    font-size: 40px;
+    line-height: 25px;
+    
+}
+.title2 a.slide-button2  {
+    margin-left: 50px;
+}
+.title2 .title2_text{
+    text-align: left;
+    margin-top: 30px;
+}
+/*******Slider 3******/
+
+
+.title1 .title3_h1 {
+   
+    font-size: 40px;
+    line-height: 25px;
+    margin-top: 20px;
+}
+.title1 .title3_text{
+    text-align: left;
+    margin-top: 30px;
+  }
+}
+@media(max-width:800px){
+    .title1{
+ left: 150px;
+ top:20px;
+position: absolute;
+}
+.slide-h2{
+    
+    line-height:20px; 
+    
+}
+.slide-h2 span{
+color:#ebe814;
+}
+.slide-h5{
+    
+    font-size: 50px;
+}
+
+ .world{
+    
+    left:130px;
+    bottom: 20px;
+    font-size: 120px;
+}
+
+.title1 a.slide-button {
+    padding: 10px 10px;
+    width: 150px;
+    margin-top: 40px;  
+}
+
+/*******slider2******/
+.title2{
+ left: 270px;
+ top:20px;
+
+}
+.title2 .title2_h1{
+    
+    font-size: 40px;
+    line-height: 25px;
+    
+}
+.title2 a.slide-button2  { 
+    width: 180px;
+    margin-top: 40px;
+    margin-left: 50px;
+}
+.title2 .title2_text{
+    text-align: left;
+    margin-top: 40px;
+}
+ 
+ /*******Slider 3******/
+.title3_part{
+   
+    font-size: 16px;
+    
+}
+.title1 a.slide-button2  {
+    width: 220px;
+    font-size: 12px;
+    margin-top: 20px;
+    text-align: center;
+}
+.title1 .title3_h1 {
+    font-size: 40px;
+    line-height: 25px;
+    margin-top: 30px;
+}
+.title1 .title3_text{
+    font-family: 'latobold_italic';
+    font-size: 15px;
+    color: #fff;
+    text-align: left;
+    margin-top: 20px;
+    position: relative;
+}
+
+}
+@media(max-width:750px){
+    .nivo-caption {
+  top:30px;
+
+}  
+.title2 a.slide-button2  {
+    padding: 10px 10px;
+    width: 150px;
+    font-size: 10px;
+    margin-top: 20px;
+    margin-left: 50px;
+}
+.title1 a.slide-button {
+    padding: 10px 10px;
+    width: 150px;
+    font-size: 10px;
+    margin-top: 30px;
+    
+}
+.title1 a.slide-button2  {
+    padding: 10px 10px;
+    
+    width: 180px;
+    font-size: 10px;
+    
+    margin-top: 20px;
+    
+}
+
+}
+@media(max-width:660px){
+  .slide-h2{
+    font-size:10px; 
+    letter-spacing: 1px;
+    line-height:15px; 
+    
+}  
+.slide-h5{
+    font-size: 36px;
+}
+
+ .world{
+    
+    left:80px;
+    bottom: 10px;
+    font-size: 80px;
+}
+.slide-h4{
+    
+    font-size: 12px;
+    letter-spacing: 1px;
+    line-height:15px; 
+}
+.title2 .title2_h1{
+    
+    font-size: 30px;
+   
+    
+}
+.title2 .title2_text{
+     font-size: 10px;
+    letter-spacing: 1px;
+    line-height:15px; 
+}
+.title3_part{
+    font-size: 10px;
+    
+}
+.title1 .title3_h1 {
+    font-size: 30px;
+    margin-top: 15px;
+}
+.title1 .title3_text{
+   
+    font-size: 10px;
+  
+    margin-top: 15px;
+   
+}
+}
+@media(max-width:560px){
+
+   .title1 .title3_h1 {
+    font-size: 20px;
+    margin-top: 10px;
+} 
+.title1 .title3_text{
+   
+    font-size: 10px;
+  
+    margin-top:5px;
+   
+}
+.title1 a.slide-button {
+    padding: 5px 5px;
+    width: 120px;
+    font-size: 10px;
+    margin-top: 15px;
+    
+}
+.title1 a.slide-button2  {
+    padding: 5px 5px;
+    
+    width: 150px;
+    font-size: 10px;
+    
+    margin-top: 15px;
+    
+}
+.slide-h4{
+    
+    font-size: 10px;
+   
+    line-height:15px; 
+}
+.title2 a.slide-button2  {
+    padding: 5px 5px;
+    width: 150px;
+    font-size: 10px;
+    margin-top: 15px;
+}
+.title2 .title2_text{
+     font-size: 10px;
+    margin-top: 15px;
+    line-height:15px; 
+
+}
+.title2{
+ left: 100px;
+}
+}
+@media(max-width:475px){
+    .slide-h2{
+    font-size:8px; 
+    letter-spacing: 1px;
+    line-height:10px; 
+    
+}  
+.slide-h4{
+    display: none; 
+}
+.slide-h5{
+    font-size: 26px;
+}
+
+ .world{
+    
+    left:60px;
+    bottom: 5px;
+    font-size: 60px;
+}
+.title2 .title2_h1{
+    
+    font-size: 26px;
+   
+    
+}
+    .title1 .title3_h1 {
+    font-size: 16px;
+    margin-top: 5px;
+} 
+.title1 .title3_text{
+  display: none;
+   
+}
+.title1 a.slide-button {
+    padding: 5px 5px;
+    width: 100px;
+    font-size: 8px;
+    margin-top: 5px;
+    
+}
+.title1 a.slide-button2  {
+    padding: 5px 5px;
+    
+    width: 100px;
+    font-size: 8px;
+    
+    margin-top: 5px;
+    
+}
+.slide-h4{
+    
+    font-size: 8px;
+   
+    line-height:10px; 
+}
+.title2 a.slide-button2  {
+    padding: 5px 5px;
+    width: 100px;
+    font-size: 8px;
+    margin-top: 5px;
+}
+.title2 .title2_text{
+ display: none;
+
+}
+.title2{
+ left: 60px;
+}
+}
+@media(max-width:300px){
+    .nivo-caption {
+  top:10px;
+
+}
+.title1{
+ left: 30px;
+ 
+}
+.title1 .title3_h1 {
+    
+    font-size: 20px;
+    
+    margin-top: 5px;
+}
+.title2 .title2_h1{
+    
+    font-size: 20px;
+    
+}
+.title2{
+ left: 30px;
+ 
+}
+}
